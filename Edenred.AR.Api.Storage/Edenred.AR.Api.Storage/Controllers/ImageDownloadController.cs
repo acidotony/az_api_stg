@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.File;
+using Microsoft.Extensions.Configuration;
 
 namespace Edenred.AR.Api.Storage.Controllers
 {
@@ -15,9 +16,11 @@ namespace Edenred.AR.Api.Storage.Controllers
     public class ImageDownloadController : ControllerBase
     {
         public static IWebHostEnvironment _enviroment;
-        public ImageDownloadController(IWebHostEnvironment enviroment)
+        public IConfiguration Configuration { get; }
+        public ImageDownloadController(IWebHostEnvironment enviroment, IConfiguration configuration)
         {
             _enviroment = enviroment;
+            Configuration = configuration;
         }
 
         public class FileDownloadApi
@@ -26,13 +29,13 @@ namespace Edenred.AR.Api.Storage.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Download(string fileName)
+        public async Task<IActionResult> Download(string fileName, string shareReference, string directoryReference)
         {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=earst01dev;AccountKey=2aEcxobBkJ8rXgcOZR9QjKvh2pgxtUwbM7vEwJZu8O8yhZlnjLznmeoVLI0KhOURVqJ12XLdql7hKdQHkLlHZw==;EndpointSuffix=core.windows.net");
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Configuration.GetSection("AzureAppConfiguration").GetSection("ConnectionString").Value);
             CloudFileClient fileClient = storageAccount.CreateCloudFileClient();
 
             // Get a reference to the file share we created previously.
-            CloudFileShare share = fileClient.GetShareReference(@"web-comercios");
+            CloudFileShare share = fileClient.GetShareReference(shareReference);
 
             // Ensure that the share exists.
             if (share.Exists() && !String.IsNullOrEmpty(fileName) && fileName.Length > 4)
@@ -41,7 +44,7 @@ namespace Edenred.AR.Api.Storage.Controllers
                 CloudFileDirectory rootDir = share.GetRootDirectoryReference();
 
                 // Get a reference to the directory we created previously.
-                CloudFileDirectory sampleDir = rootDir.GetDirectoryReference(@"facturas");
+                CloudFileDirectory sampleDir = rootDir.GetDirectoryReference(directoryReference);
 
                 // Ensure that the directory exists.
                 if (sampleDir.Exists())

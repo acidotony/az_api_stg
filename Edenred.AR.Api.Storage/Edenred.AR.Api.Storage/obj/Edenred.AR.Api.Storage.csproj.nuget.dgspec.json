@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj": {}
+    "C:\\Users\\albenitez\\Source\\Repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj": {
+    "C:\\Users\\albenitez\\Source\\Repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj",
+        "projectUniqueName": "C:\\Users\\albenitez\\Source\\Repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj",
         "projectName": "Edenred.AR.Api.Storage",
-        "projectPath": "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj",
-        "packagesPath": "C:\\Users\\cvalderrama\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\obj\\",
+        "projectPath": "C:\\Users\\albenitez\\Source\\Repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj",
+        "packagesPath": "C:\\Users\\albenitez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\albenitez\\Source\\Repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\cvalderrama\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\albenitez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "http://packages.nuget.org/v1/FeedService.svc/": {},
-          "https://www.nuget.org/api/v2/": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
