@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.File;
+using Microsoft.Extensions.Configuration;
 
 namespace Edenred.AR.Api.Storage.Controllers
 {
@@ -18,14 +19,11 @@ namespace Edenred.AR.Api.Storage.Controllers
     public class ImageUploadController : ControllerBase
     {
         public static IWebHostEnvironment _enviroment;
-        public ImageUploadController(IWebHostEnvironment enviroment)
+        public IConfiguration Configuration { get; }
+        public ImageUploadController(IWebHostEnvironment enviroment, IConfiguration configuration)
         {
             _enviroment = enviroment;
-        }
-
-        public class FileUploadAPI
-        {
-            public IFormFile files { get; set; }
+            Configuration = configuration;
         }
 
         [HttpPost]
@@ -39,18 +37,18 @@ namespace Edenred.AR.Api.Storage.Controllers
 
             Dictionary<string, object> dict = JsonSerializer.Deserialize<Dictionary<string, object>>(sRequest);
             string name = dict["FILE_NAME"].ToString();
-            string ext = dict["FILE_EXT"].ToString();
-            string mime = dict["FILE_MIME_TYPE"].ToString();
+            string shareReference = dict["SHARE_REFERENCE"].ToString();
+            string directoryReference = dict["DIRECTORY_REFERENCE"].ToString();
             string image = dict["IMAGE_DATA"].ToString();
             byte[] buffer = Convert.FromBase64String(image);
 
             try
             {
-                CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=earst01dev;AccountKey=2aEcxobBkJ8rXgcOZR9QjKvh2pgxtUwbM7vEwJZu8O8yhZlnjLznmeoVLI0KhOURVqJ12XLdql7hKdQHkLlHZw==;EndpointSuffix=core.windows.net");
+                CloudStorageAccount storageAccount = CloudStorageAccount.Parse(Configuration.GetSection("AzureAppConfiguration").GetSection("ConnectionString").Value);
                 CloudFileClient fileClient = storageAccount.CreateCloudFileClient();
 
                 // Get a reference to the file share we created previously.
-                CloudFileShare share = fileClient.GetShareReference(@"web-comercios");
+                CloudFileShare share = fileClient.GetShareReference(shareReference);
 
                 // Ensure that the share exists.
                 if (share.Exists())
@@ -59,7 +57,7 @@ namespace Edenred.AR.Api.Storage.Controllers
                     CloudFileDirectory rootDir = share.GetRootDirectoryReference();
 
                     // Get a reference to the directory we created previously.
-                    CloudFileDirectory cloudSubDirectory = rootDir.GetDirectoryReference(@"facturas");
+                    CloudFileDirectory cloudSubDirectory = rootDir.GetDirectoryReference(directoryReference);
 
                     // Ensure that the directory exists.
                     if (cloudSubDirectory.Exists())
