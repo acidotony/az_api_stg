@@ -91,3 +91,5 @@ C:\Users\albenitez\Source\Repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenr
 C:\Users\albenitez\Source\Repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenred.AR.Api.Storage\obj\Debug\netcoreapp3.1\Edenred.AR.Api.Storage.dll
 C:\Users\albenitez\Source\Repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenred.AR.Api.Storage\obj\Debug\netcoreapp3.1\Edenred.AR.Api.Storage.pdb
 C:\Users\albenitez\Source\Repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenred.AR.Api.Storage\obj\Debug\netcoreapp3.1\Edenred.AR.Api.Storage.genruntimeconfig.cache
+C:\Users\cvalderrama\source\repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenred.AR.Api.Storage\obj\Debug\netcoreapp3.1\Edenred.AR.Api.Storage.csproj.CoreCompileInputs.cache
+C:\Users\cvalderrama\source\repos\EAR-Stg-ApiServices\Edenred.AR.Api.Storage\Edenred.AR.Api.Storage\obj\Debug\netcoreapp3.1\Edenred.AR.Api.Storage.MvcApplicationPartsAssemblyInfo.cache
