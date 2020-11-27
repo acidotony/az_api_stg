@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "D/n++B1vtLdkFFYxzVz/se8J8dHqWg7eSLh1w5nQzIHwtczwwjGOa/Ri1hSryn2hdYvpRltlUTVCi0E28gX9iQ==",
+  "dgSpecHash": "l+F9ElsmBKyf2riwoGfwEQeJdSeiDG9pq1v8kjosz+xTS+yo51eDJrSSW+iI6IasEgBXhkGFs+K+EZyN4Yz2pA==",
   "success": true,
   "projectFilePath": "C:\\Users\\cvalderrama\\source\\repos\\EAR-Stg-ApiServices\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage\\Edenred.AR.Api.Storage.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\cvalderrama\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512",
     "C:\\Users\\cvalderrama\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
     "C:\\Users\\cvalderrama\\.nuget\\packages\\newtonsoft.json\\10.0.2\\newtonsoft.json.10.0.2.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
